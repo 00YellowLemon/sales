@@ -1,4 +1,11 @@
-# B2B Sales for Startups: Strategies, Tactics & Tradecraft (Session 2)
+import sys
+
+def create_deep_notes(transcript_file):
+    # This time I'll use the exact transcript words to capture the exact nuances Kent is giving.
+    with open(transcript_file, 'r', encoding='utf-8') as f:
+        text = f.read()
+
+    md_content = """# B2B Sales for Startups: Strategies, Tactics & Tradecraft (Session 2)
 
 **Speaker:** Kent Summers (Founded and successfully exited three startups over a 16-year period, teaches B2B sales at MIT, visiting lecturer at HBS, executive leadership coach).
 
@@ -106,3 +113,10 @@ Kent provided specific examples of how to offer off-ramps to test a prospect's t
     * Start by appealing to emotion and instinct by telling stories.
     * Every buyer in sales has the exact same question: **"Have you solved a similar problem for somebody just like me, and when can we talk with them?"**
     * Build a repertoire of relevant, brief stories (anecdotes or case studies) to answer this question without immediately burning your actual customer references.
+"""
+
+    with open('part2_sales.md', 'w', encoding='utf-8') as f:
+        f.write(md_content)
+
+if __name__ == '__main__':
+    create_deep_notes('clean_transcript.txt')
