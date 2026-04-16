@@ -1,10 +1,5 @@
-import sys
-
-def create_deep_notes(transcript_file):
+def create_deep_notes():
     # This time I'll use the exact transcript words to capture the exact nuances Kent is giving.
-    with open(transcript_file, 'r', encoding='utf-8') as f:
-        text = f.read()
-
     md_content = """# B2B Sales for Startups: Strategies, Tactics & Tradecraft (Session 2)
 
 **Speaker:** Kent Summers (Founded and successfully exited three startups over a 16-year period, teaches B2B sales at MIT, visiting lecturer at HBS, executive leadership coach).
@@ -119,4 +114,4 @@ Kent provided specific examples of how to offer off-ramps to test a prospect's t
         f.write(md_content)
 
 if __name__ == '__main__':
-    create_deep_notes('clean_transcript.txt')
+    create_deep_notes()
